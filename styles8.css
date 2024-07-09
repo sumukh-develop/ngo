@@ -1,0 +1,121 @@
+body {
+    background-image: url("NGO.jpg");
+    background-size: 1600px 750px;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color: #337ead;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.ngo-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    opacity: 0;
+    animation: slideInUp 0.5s forwards;
+}
+
+.ngo-card:nth-child(even) {
+    animation-delay: 0.2s;
+}
+
+.ngo-card:nth-child(odd) {
+    animation-delay: 0.4s;
+}
+
+.ngo-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.ngo-logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.ngo-card:hover .ngo-logo {
+    transform: rotate(360deg);
+}
+
+.ngo-details {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.ngo-details h2 {
+    margin: 0 0 10px;
+    color: #007BFF;
+    font-size: 1.8em;
+    transition: color 0.3s ease-in-out;
+}
+
+.ngo-card:hover .ngo-details h2 {
+    color: #0056b3;
+}
+
+.ngo-details p {
+    margin: 0 0 20px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.proceed-button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.proceed-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
